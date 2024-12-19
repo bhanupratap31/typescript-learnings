@@ -4,8 +4,34 @@
 
 // cout("Bhanu", "Pratap"); 
 
-function sum(a: number, b: number){
-    return a+b; 
+// function sum(a: number, b: number){
+//     return a+b; 
+// }
+
+// console.log(sum(10,20));
+interface User {
+    firstName: string, 
+    lastName: string, 
+    age: number
+};
+
+function isLegal(user: User){
+    if(user.age>18) return true; 
+    return false; 
 }
 
-console.log(sum(10,20));
+function greet(user: User){
+    console.log("Hi" + user.firstName +"!"); 
+}
+
+isLegal({
+    firstName: "Bhanu", 
+    lastName: "Pratap", 
+    age: 26
+});
+
+greet({
+    firstName: "Bhanu", 
+    lastName: "Pratap", 
+    age: 26
+});
