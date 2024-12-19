@@ -12,7 +12,8 @@
 interface User {
     firstName: string, 
     lastName: string, 
-    age: number
+    age: number,
+    email?: string 
 };
 
 function isLegal(user: User){
